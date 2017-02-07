@@ -7,17 +7,16 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+app.get('/', function (req, res) {
+  res.send("hello...welcome to my page");
+});
+app.get('/', function (req, res) {
+  res.send("speak your heart...if they dont understand then thats not ur mistake");
+});
 app.get('/article-three', function (req, res) {
-  "Live life happily";
-});
-app.get('/article-one', function (req, res) {
-  "speak your heart...if they dont understand then may be they do not follow for it";
+  res.send("live life happily");
 });
 
-
-app.get('/article-two', function (req, res) {
- "keep smiling" ;
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
