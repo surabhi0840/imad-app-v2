@@ -4,9 +4,19 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+app.get('/article-three', function (req, res) {
+  "Live life happily";
+});
+app.get('/article-one', function (req, res) {
+  "speak your heart...if they dont understand then may be they do not follow for it";
+});
+
+
+app.get('/article-two', function (req, res) {
+ "keep smiling" ;
 });
 
 app.get('/ui/style.css', function (req, res) {
