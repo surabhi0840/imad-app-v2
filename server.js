@@ -7,10 +7,10 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/', function (req, res) {
+app.get('/article-one', function (req, res) {
   res.send('hello...welcome to my page');
 });
-app.get('/', function (req, res) {
+app.get('/article-two', function (req, res) {
   res.send('speak your heart...if they dont understand then thats not ur mistake');
 });
 app.get('/article-three', function (req, res) {
